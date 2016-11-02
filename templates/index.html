@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ninja Gold</title>
+        <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}" type = "text/css" media="screen" title="no title">
+    </head>
+    <body>
+        <div id = "wrapper">
+            <div id = "yourGold">
+                Your Gold: <input id = "bank" type="text" name="name" value = {{ bank }}>
+            </div>
+            <div class = "goldForm" id = "farm">
+                <form class="" action= "/process_money" method="post">
+                    <h4>Farm</h4>
+                    <h5>(earns 10-20 gold)</h5>
+                    <input class = "find" type="submit" name="farm_form" value="Find Gold!">
+                    <input type="hidden" name="location" value="farm">
+                </form>
+            </div>
+            <div class = "goldForm" id = "cave">
+                <form class="" action= "/process_money" method="post">
+                    <h4>Cave</h4>
+                    <h5>(earns 5-10 gold)</h5>
+                    <input class = "find" type="submit" name="cave_form" value="Find Gold!">
+                    <input type="hidden" name="location" value="cave">
+                </form>
+            </div>
+            <div class = "goldForm" id = "house">
+                <form class="" action= "/process_money" method="post">
+                    <h4>House</h4>
+                    <h5>(earns 2-5 gold)</h5>
+                    <input class = "find" type="submit" name="house_form" value="Find Gold!">
+                    <input type="hidden" name="location" value="house">
+                </form>
+            </div>
+            <div class="goldForm" id = "casino">
+                <form class="" action= "/process_money" method="post">
+                    <h4>Casino</h4>
+                    <h5>(earns/takes 0-50 gold)</h5>
+                    <input class = "find" type="submit" name="casino_form" value="Find Gold!">
+                    <input type="hidden" name="location" value="casino">
+                </form>
+            </div>
+            <div id = "activities">
+                Activities:
+                <div id = "actBox">
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
